@@ -66,7 +66,7 @@ namespace Unity.Robotics.ROSTCPConnector.MessageGeneration
 
             if (className.Equals(""))
             {
-                this.className = MsgAutoGenUtilities.CapitalizeFirstLetter(inFileName) + MsgAutoGenUtilities.MessageClassSuffix;
+                this.className = inFileName + MsgAutoGenUtilities.MessageClassSuffix;
             }
             else
             {

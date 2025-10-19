@@ -71,7 +71,7 @@ namespace Unity.Robotics.ROSTCPConnector.MessageGeneration
             string rosPackageName = MessageAutoGen.GetRosPackageName(inFilePath);
             string outFolder = MessageAutoGen.GetMessageOutFolder(outPath, rosPackageName);
             string extension = Path.GetExtension(inFilePath);
-            string className = MsgAutoGenUtilities.CapitalizeFirstLetter(Path.GetFileNameWithoutExtension(inFilePath)) + MsgAutoGenUtilities.MessageClassSuffix;
+            string className = Path.GetFileNameWithoutExtension(inFilePath) + MsgAutoGenUtilities.MessageClassSuffix;
             return Path.Combine(outFolder, "msg", className + ".cs");
         }
 
